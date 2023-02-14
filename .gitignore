@@ -1,2 +1,6 @@
 ebin
 *~
+.idea/
+_build/
+rebar.lock
+shamir_key_sharing.iml

@@ -27,7 +27,7 @@ share(Secret, Threshold, Count) when is_list(Secret) ->
 
 share(Secret, Threshold, Count) when (Secret >= 0 andalso Secret =< 255) ->
     GF = galois:generate(8),
-    Coeffs = binary_to_list(crypto:rand_bytes(Threshold - 1)) ++ [Secret],
+    Coeffs = binary_to_list(crypto:strong_rand_bytes(Threshold - 1)) ++ [Secret],
     [horner(GF, X, Coeffs) || X <- lists:seq(1, Count)].
 
 horner(GF, X, Coeffs) ->
