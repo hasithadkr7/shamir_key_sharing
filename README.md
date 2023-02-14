@@ -10,6 +10,6 @@ Pure Erlang implementation of Shamir Secret Sharing.
 <pre>
 1&gt; Shares = shamir:share(&lt;&lt;"hello"&gt;&gt;, 3, 4).
 ... shares printed here
-2&gt; shamir:recover(lists:sublist(Shares, 3).
+2&gt; shamir:recover(lists:sublist(Shares, 3)).
 &lt;&lt;"hello"&gt;&gt;
 </pre>
